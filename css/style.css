@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --soft_blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main_bg: hsl(217, 54%, 11%);
+  --card_bg: hsl(216, 50%, 16%);
+  --line_color: hsl(215, 32%, 27%);
+  --description_color: hsl(214, 14%, 56%);
+  --white: #fff;
+  --cyan_view:hsla(178, 100%, 50%, 0.186);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--description_color);
+}
+
+.attribution a {
+  color: var(--cyan);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.attribution a:hover {
+  color: var(--cyan_view);
+}
+
+body {
+  background: var(--main_bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.card {
+  width: 270px;
+  height: 28rem;
+  background: var(--card_bg);
+  padding: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 3rem auto;
+  display: grid;
+  box-shadow: 5px 5px 1.3rem 1px rgba(0, 0, 0, 0.518);
+}
+.card .img_container {
+  position: relative;
+}
+.card .img_container .view {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 238px;
+  height: 238px;
+  background: var(--cyan_view);
+  border-radius: 8px;
+  opacity: 0;
+  transition: 0.3s;
+}
+.card .img_container .view:hover {
+  opacity: 1;
+}
+.card .equilibrium_image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  width: 238px;
+  height: 238px;
+}
+.card a {
+  text-decoration: none;
+}
+.card a .name {
+  color: var(--white);
+  transition: color 0.3s;
+  font-weight: 600;
+}
+.card a .name:hover {
+  color: var(--cyan);
+}
+.card .description {
+  color: var(--description_color);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.card .data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.card .data .value {
+  color: var(--cyan);
+}
+.card .data .caducate_date {
+  color: var(--soft_blue);
+  font-weight: 300;
+}
+.card .division_bar {
+  height: 1.4px;
+  background: var(--line_color);
+}
+.card .creator {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+}
+.card .creator img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 2rem;
+  margin: 0 0.85rem 0 0;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+.card .creator .creator_text {
+  color: var(--description_color);
+}
+.card .creator .creator_text .creator_name {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.card .creator .creator_text .creator_name:hover {
+  color: var(--cyan);
+}/*# sourceMappingURL=style.css.map */
